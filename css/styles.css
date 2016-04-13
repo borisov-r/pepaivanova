@@ -2,6 +2,8 @@
 	border: 0px solid gray;	/*set to 1px to view border */
 	background-color: white;
 	overflow-x: auto;
+	position: absolute;
+	z-index: -100;
 }
 #background-div table {
 	border: 0px solid grey; /*set to 1px to view border */
