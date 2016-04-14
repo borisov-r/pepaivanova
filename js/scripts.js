@@ -3,6 +3,19 @@
 
 
 */
+function closest (num, arr) {
+	var curr = arr[0];
+	var diff = Math.abs (num - curr);
+	for (var val = 0; val < arr.length; val++) {
+		var newdiff = Math.abs (num - arr[val]);
+		if (newdiff < diff) {
+			diff = newdiff;
+			curr = arr[val];
+		}
+	}
+	return curr;
+}
+	
 
 function generateBackgroundTable() {
 
@@ -14,8 +27,14 @@ function generateBackgroundTable() {
 	console.log("Number of rows: ");
 	console.log(rows);
 
-	var cells = Math.floor(window.innerWidth/100);
+	var cells_ = Math.floor(window.innerWidth/100);
 	console.log("Number of cells: ");
+	console.log(cells_);
+
+	// fix bug with this code, when the number of cells is not div by 4
+	var testArray = [4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100];
+	var cells = closest(cells_,testArray);
+	console.log("Closest number is: ");
 	console.log(cells);
 
 	var temp = 0;

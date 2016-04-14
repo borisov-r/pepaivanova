@@ -4,6 +4,7 @@
 	overflow-x: auto;
 	position: absolute;
 	z-index: -100;
+	width: 99%;
 }
 #background-div table {
 	border: 0px solid grey; /*set to 1px to view border */
