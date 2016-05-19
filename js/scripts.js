@@ -41,7 +41,8 @@ function generateBackgroundTable() {
 function insertRows(table) {
 	// generates table with rows for the background
 	var rows = 0;
-	rows = Math.floor(window.innerHeight/25);
+	// rows = Math.floor(window.innerHeight/25);
+	rows = Math.floor(document.documentElement.scrollHeight/25);
 	console.log("Number of rows: ");
 	console.log(rows);
 
