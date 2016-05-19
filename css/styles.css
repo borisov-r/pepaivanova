@@ -34,3 +34,8 @@ html,body {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size: 100%;
 }
+.td {
+	min-width: 250px;
+	width: 1000px;
+	max-width: 1960px;
+}
