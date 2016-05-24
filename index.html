@@ -43,9 +43,9 @@
 </script>
 <script>
 function load(time){
-      //var x = new XMLHttpRequest()
-      //x.open('GET', "file:///home/radoslav/work/pace/tests/demo.html" + time, true);
-      //x.send();
+      var x = new XMLHttpRequest()
+      x.open('GET', "https://htmlpreview.github.io/?https://github.com/borisov-r/pepaivanova/blob/master/index.html" + time, true);
+      x.send();
     };
 
     load(20);
@@ -55,9 +55,9 @@ function load(time){
     load(3000);
 
     setTimeout(function(){
-      //Pace.ignore(function(){
-      //  load(3100);
-      //});
+      Pace.ignore(function(){
+        load(3100);
+      });
     }, 4000);
 
     Pace.on('hide', function(){
