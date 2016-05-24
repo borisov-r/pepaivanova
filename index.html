@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/pace.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body onload="generateBackgroundTable()" onresize="generateBackgroundTable()">
+<body onload="" onresize="generateBackgroundTable()">
 
 <!-- background -->
 <div id="background-div">
@@ -18,22 +18,56 @@
 <!--p>Pepa Ivanova's web site</p-->
 
 <table align="center" style="height:90%">
-<tr><td class="td" style="font-size:190%;padding-left:30%;padding-top:2%;padding-bottom:1%;">Pepa Ivanova</td></tr>
-<tr><td style="font-size:250%;padding-left:59%;padding-top:0%;padding-bottom:3%;">current</td></tr>
-<tr><td style="font-size:140%;padding-left:41%">news</td></tr>
-<tr><td style="font-size:220%;padding-left:49%">joined by</td></tr>
-<tr><td style="font-size:100%;padding-left:27%">present</td></tr>
-<tr><td style="font-size:90%;padding-left:33%">future</td></tr>
-<tr><td style="font-size:90%;padding-left:20%">past</td></tr>
-<tr><td style="font-size:250%;padding-left:69%">info</td></tr>
-<tr><td style="font-size:230%;padding-left:53%;padding-top:1%;padding-bottom:3%;">contact</td></tr>
-<tr><td style="font-size:180%;padding-left:33%">while wandering</td></tr>
+<tr><td id="id1" class="td" style="font-size:190%;padding-left:30%;padding-top:2%;padding-bottom:1%;visibility:hidden;">Pepa Ivanova</td></tr>
+<tr><td id="id2" style="font-size:250%;padding-left:59%;padding-top:0%;padding-bottom:3%;visibility:hidden;">current</td></tr>
+<tr><td id="id3" style="font-size:140%;padding-left:41%;visibility:hidden;">news</td></tr>
+<tr><td id="id4" style="font-size:220%;padding-left:49%;visibility:hidden;">joined by</td></tr>
+<tr><td id="id5" style="font-size:100%;padding-left:27%;visibility:hidden;">present</td></tr>
+<tr><td id="id6" style="font-size:90%;padding-left:33%;visibility:hidden;">future</td></tr>
+<tr><td id="id7" style="font-size:90%;padding-left:20%;visibility:hidden;">past</td></tr>
+<tr><td id="id8" style="font-size:250%;padding-left:69%;visibility:hidden;">info</td></tr>
+<tr><td id="id9" style="font-size:230%;padding-left:53%;padding-top:1%;padding-bottom:3%;;visibility:hidden;">contact</td></tr>
+<tr><td id="id10" style="font-size:180%;padding-left:33%;visibility:hidden;">while wandering</td></tr>
 </table>
 
 <p id="one-early-morning">one early morning at MHKA, Lodgers #bolwerk</p>
 
 <script src="js/scripts.js"></script>
 <script src="js/pace.min.js"></script>
+
+<script>
+	paceOptions = {
+		elements: true,
+		restartOnRequestAfter: false
+	}
+</script>
+<script>
+function load(time){
+      //var x = new XMLHttpRequest()
+      //x.open('GET', "file:///home/radoslav/work/pace/tests/demo.html" + time, true);
+      //x.send();
+    };
+
+    load(20);
+    load(100);
+    load(500);
+    load(2000);
+    load(3000);
+
+    setTimeout(function(){
+      //Pace.ignore(function(){
+      //  load(3100);
+      //});
+    }, 4000);
+
+    Pace.on('hide', function(){
+      for (var i=1; i < 11; i++) {
+          document.getElementById('id'+i).style.visibility = "visible";
+      }
+      generateBackgroundTable();      
+      console.log('Pace done');
+    });	
+</script>
 
 </body>
 </html>
