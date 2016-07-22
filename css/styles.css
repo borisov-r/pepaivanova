@@ -25,7 +25,8 @@ html,body {
 #one-early-morning {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
-	padding-left: 2%;
+        color: grey;
+        padding-left: 0%;
 }
 #main-table {
 	border: 0px solid grey;
@@ -41,21 +42,53 @@ html,body {
 }
 
 a:link {
-    text-decoration: none;
-    color: grey;
+    	text-decoration: none;
+    	color: grey;
 }
 
 a:visited {
-    text-decoration: none;
-    color: grey;
+    	text-decoration: none;
+    	color: grey;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: black;
+        text-decoration: underline;
+        color: black;
 }
 
 a:active {
     text-decoration: none;
     color: black;
+}
+
+.contact_tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.contact_tooltip .contact_tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.contact_tooltip:hover .contact_tooltiptext {
+    visibility: visible;
+}
+.contact_tooltip .contact_tooltiptext {
+    width: 220px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -110px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
