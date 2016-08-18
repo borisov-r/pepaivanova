@@ -2,10 +2,9 @@
 <html>
 <head>
 <title>Pepa Ivanova's official web page</title>
-	<link rel="stylesheet" type="text/css" href="css/pace-grey.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body onload="" onresize="generateBackgroundTable()">
+<body onload="generateBackgroundTable()" onresize="generateBackgroundTable()">
 
 <!-- background -->
 <div id="background-div">
@@ -18,58 +17,23 @@
 <!--p>Pepa Ivanova's web site</p-->
 
 <table align="center" style="height:90%">
-<tr><td id="id1" class="td" style="font-size:190%;padding-left:30%;padding-top:2%;padding-bottom:1%;visibility:hidden;"><a href="">Pepa Ivanova</a></td></tr>
-<tr><td id="id2" style="font-size:250%;padding-left:59%;padding-top:0%;padding-bottom:3%;visibility:hidden;"><a href="">current</a></td></tr>
-<tr><td id="id3" style="font-size:140%;padding-left:41%;visibility:hidden;"><a href="">news</a></td></tr>
-<tr><td id="id4" style="font-size:220%;padding-left:49%;visibility:hidden;"><a href=""></a></td></tr>
-<tr><td id="id5" style="font-size:100%;padding-left:27%;visibility:hidden;"><a href=""></a></td></tr>
-<tr><td id="id6" style="font-size:90%;padding-left:33%;visibility:hidden;"><a href="">future</a></td></tr>
-<tr><td id="id7" style="font-size:90%;padding-left:20%;visibility:hidden;"><a href="">past</a></td></tr>
-<tr><td id="id8" style="font-size:250%;padding-left:69%;visibility:hidden;"><a href="">info</a></td></tr>
-<tr><td id="id9" style="font-size:230%;padding-left:53%;padding-top:1%;padding-bottom:3%;;visibility:hidden;"><a href="mailto:info@pepaivanova.com"><div class="contact_tooltip">contact<span class="contact_tooltiptext" style="font-size:40% !important;">info@pepaivanova.com</span></div></a></td></tr>
-<tr><td id="id10" style="font-size:180%;padding-left:33%;visibility:hidden;"><a href="">while wandering</a></td></tr>
+<tr><td id="id1" class="td" style="font-size:190%;padding-left:30%;padding-top:2%;padding-bottom:1%;"><a href="">Pepa Ivanova</a></td></tr>
+<tr><td id="id2" style="font-size:250%;padding-left:59%;padding-top:0%;padding-bottom:3%;"><a href="">Projects</a></td></tr>
+<tr><td id="id3" style="font-size:140%;padding-left:41%;"><a href="">News</a></td></tr>
+<tr><td id="id4" style="font-size:220%;padding-left:49%;"><a href=""></a></td></tr>
+<tr><td id="id5" style="font-size:100%;padding-left:27%;"><a href=""></a></td></tr>
+<tr><td id="id6" style="font-size:90%;padding-left:33%;"><a href="">Involve into</a></td></tr>
+<tr><td id="id7" style="font-size:90%;padding-left:40%;"><a href="">Joined by</a></td></tr>
+<tr><td id="id8" style="font-size:250%;padding-left:69%;"><a href=""></a></td></tr>
+<tr><td id="id9" style="font-size:230%;padding-left:53%;padding-top:1%;padding-bottom:3%;"><a href="mailto:info@pepaivanova.com"><div class="contact_tooltip">contact<span class="contact_tooltiptext" style="font-size:40% !important;">info@pepaivanova.com</span></div></a></td></tr>
+<tr><td id="id10" style="font-size:180%;padding-left:33%;"><a href="">while wandering</a></td></tr>
 </table>
 
 <p id="one-early-morning" type="text/css" href="css/styles.css;"">One early morning at M HKA, Lodgers #bolwerk, June 2015 </p>
-<li id="one-early-morning" type="text/css" href="css/styles.css;""> (final website coming soon)</li>
+<li id="one-early-morning" type="text/css" href="css/styles.css;"> (final website coming soon)</li>
 
 
 <script src="js/scripts.js"></script>
-<script src="js/pace.min.js"></script>
-
-<script>
-	paceOptions = {
-		elements: true,
-		restartOnRequestAfter: false
-	}
-</script>
-<script>
-function load(time){
-      var x = new XMLHttpRequest()
-      x.open('GET', "https://htmlpreview.github.io/?https://github.com/borisov-r/pepaivanova/blob/master/index.html" + time, true);
-      x.send();
-    };
-
-    load(20);
-    load(100);
-    load(500);
-    load(2000);
-    load(3000);
-
-    setTimeout(function(){
-      Pace.ignore(function(){
-        load(3100);
-      });
-    }, 4000);
-
-    Pace.on('hide', function(){
-      for (var i=1; i < 11; i++) {
-          document.getElementById('id'+i).style.visibility = "visible";
-      }
-      generateBackgroundTable();      
-      console.log('Pace done');
-    });	
-</script>
 
 </body>
 </html>
