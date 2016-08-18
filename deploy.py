@@ -73,9 +73,9 @@ def main():
     modify_index('scripts.js', scripts_name)
     modify_index('styles.css', styles_name)
   
-    upload_js = 'curl -T ./deploy/js/' + scripts_name + ' ftp://' + args[2] + '/public_html/js/ --user ' + args[0] + ':' + args[1]
-    upload_css = 'curl -T ./deploy/css/' + styles_name + ' ftp://' + args[2] + '/public_html/css/ --user ' + args[0] + ':' + args[1]
-    upload_index = 'curl -T ./deploy/index.html ftp://' + args[2] + '/public_html/ --user ' + args[0] + ':' + args[1]
+    upload_js = 'curl -T ./deploy/js/' + scripts_name + ' ftp://' + args[2] + '/public_html/js/ --user ' + args[0] + '@pepaivanova.com:' + args[1]
+    upload_css = 'curl -T ./deploy/css/' + styles_name + ' ftp://' + args[2] + '/public_html/css/ --user ' + args[0] + '@pepaivanova.com:' + args[1]
+    upload_index = 'curl -T ./deploy/index.html ftp://' + args[2] + '/public_html/ --user ' + args[0] + '@pepaivanova.com:' + args[1]
 
     print(upload_js)
     print(upload_css)
