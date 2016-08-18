@@ -64,7 +64,7 @@ a:active {
 .contact_tooltip {
     position: relative;
     display: inline-block;
-    /* border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+    /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
@@ -72,11 +72,11 @@ a:active {
     visibility: hidden;
     max-width: 550px;
     min-width: 220px;
-    background-color: black;
-    color: #fff;
+    background-color: lightgray;
+    color: black;
     text-align: center;
     padding: 5px 0px;
-    border-radius: 6px;
+    border-radius: 1px;
  
     /* Position the tooltip text - see examples below! */
     position: absolute;
